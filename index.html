@@ -25,8 +25,18 @@ html {
   font-style: italic;
 }
 </style>
+<script>
+function showEmail(element) {
+  prefix = "geneva"
+  domain = "genevawren.com"
+  email = prefix + "@" + domain;
+  element.innerHTML = '<a href="mailto:' + email + '">' + email + '</a>'
+}
+</script>
 </head>
 <body>
-  <div id="email"></div>
+  <div id="email" onClick="showEmail(this)">
+    <a href="#">email</a>
+  </div>
 </body>
 </html>
